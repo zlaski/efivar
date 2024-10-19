@@ -27,3 +27,6 @@ core.*
 cov-int
 vgcore.*
 scan-results/
+/.vs
+/.build
+/.install
