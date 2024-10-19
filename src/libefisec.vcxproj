@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(AKITOOLS)\akibld\akibld.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{819F32C6-B4AD-4F09-AB16-F8C830C446E0}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="esl-iter.c" />
+    <ClCompile Include="sec.c" />
+    <ClCompile Include="secdb.c" />
+    <ClCompile Include="util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libefisec-resources.h" />
+    <ClInclude Include="libefisec.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="libefisec.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libefisec.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libefisec.akibld.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(AKIROOT)\svn\akisystems\akilib\akilib.vcxproj">
+      <Project>{0A19BC1F-D9EA-4438-BA0D-2E42C97FC45D}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(AKITOOLS)\akibld\akibld.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{54B2ABBF-4E8A-4C58-A6FA-60FAB8B51AD5}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="crc32.c" />
+    <ClCompile Include="creator.c" />
+    <ClCompile Include="disk.c" />
+    <ClCompile Include="gpt.c" />
+    <ClCompile Include="linux-acpi-root.c" />
+    <ClCompile Include="linux-acpi.c" />
+    <ClCompile Include="linux-ata.c" />
+    <ClCompile Include="linux-emmc.c" />
+    <ClCompile Include="linux-i2o.c" />
+    <ClCompile Include="linux-md.c" />
+    <ClCompile Include="linux-nvme.c" />
+    <ClCompile Include="linux-pci-root.c" />
+    <ClCompile Include="linux-pci.c" />
+    <ClCompile Include="linux-pmem.c" />
+    <ClCompile Include="linux-sas.c" />
+    <ClCompile Include="linux-sata.c" />
+    <ClCompile Include="linux-scsi.c" />
+    <ClCompile Include="linux-soc-root.c" />
+    <ClCompile Include="linux-virtblk.c" />
+    <ClCompile Include="linux-virtual-root.c" />
+    <ClCompile Include="linux.c" />
+    <ClCompile Include="loadopt.c" />
+    <ClCompile Include="path-helpers.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libefiboot-resources.h" />
+    <ClInclude Include="libefiboot.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="libefiboot.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libefiboot.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libefiboot.akibld.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(AKIROOT)\svn\akisystems\akilib\akilib.vcxproj">
+      <Project>{0A19BC1F-D9EA-4438-BA0D-2E42C97FC45D}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

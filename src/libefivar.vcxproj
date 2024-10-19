@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(AKITOOLS)\akibld\akibld.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B0264AC0-EB3D-47C0-93D4-A8B7B3A5F97C}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="crc32.c" />
+    <ClCompile Include="dp-acpi.c" />
+    <ClCompile Include="dp-hw.c" />
+    <ClCompile Include="dp-media.c" />
+    <ClCompile Include="dp-message.c" />
+    <ClCompile Include="dp.c" />
+    <ClCompile Include="efivarfs.c" />
+    <ClCompile Include="error.c" />
+    <ClCompile Include="export.c" />
+    <ClCompile Include="guid.c" />
+    <ClCompile Include="lib.c" />
+    <ClCompile Include="time.c" />
+    <ClCompile Include="vars.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libefivar-resources.h" />
+    <ClInclude Include="libefivar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="libefivar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libefivar.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="libefivar.akibld.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(AKIROOT)\svn\akisystems\akilib\akilib.vcxproj">
+      <Project>{0A19BC1F-D9EA-4438-BA0D-2E42C97FC45D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="makeguids.vcxproj">
+      <Project>{fd327de6-a9b6-4a44-af6d-2ec69aa5d47c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

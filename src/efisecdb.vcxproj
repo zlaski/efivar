@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <SubSystem>Console</SubSystem>
+  </PropertyGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(AKITOOLS)\akibld\akibld.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E5E5271C-4E2D-4AAF-890C-CAE275A0B623}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="efisecdb.c" />
+    <ClCompile Include="efisecdb.cpp" />
+    <ClCompile Include="secdb-dump.c" />
+    <ClCompile Include="util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="efisecdb-resources.h" />
+    <ClInclude Include="efisecdb.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="efisecdb.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="efisecdb.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="efisecdb.akibld.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(AKIROOT)\svn\akisystems\akilib\akilib.vcxproj">
+      <Project>{0A19BC1F-D9EA-4438-BA0D-2E42C97FC45D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="makeguids.vcxproj">
+      <Project>{fd327de6-a9b6-4a44-af6d-2ec69aa5d47c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

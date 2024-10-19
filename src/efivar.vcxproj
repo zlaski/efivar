@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <SubSystem>Console</SubSystem>
+  </PropertyGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(AKITOOLS)\akibld\akibld.props" />
+  </ImportGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{886484C7-9C4B-43CC-9735-3D5C501D609F}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="efivar.c" />
+    <ClCompile Include="guid.c" />
+    <ClCompile Include="util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="efivar-resources.h" />
+    <ClInclude Include="efivar.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="efivar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="efivar.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="efivar.akibld.bat" />
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(AKIROOT)\svn\akisystems\akilib\akilib.vcxproj">
+      <Project>{0A19BC1F-D9EA-4438-BA0D-2E42C97FC45D}</Project>
+    </ProjectReference>
+    <ProjectReference Include="makeguids.vcxproj">
+      <Project>{fd327de6-a9b6-4a44-af6d-2ec69aa5d47c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
